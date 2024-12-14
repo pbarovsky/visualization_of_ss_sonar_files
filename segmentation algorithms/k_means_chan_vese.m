@@ -2,9 +2,9 @@
 
 clc; clear all; close all;
 
-k_means_chan_vese("../data/images/scan-4125-8.jpg")
+k_means_chan_vese_alg("../data/images/ship_33.jpg")
 
-function k_means_chan_vese(image_path)
+function k_means_chan_vese_alg(image_path)
     % Чтение изображения
     img = imread(image_path);
     if size(img, 3) == 3

@@ -2,7 +2,7 @@
 
 clc; clear all; close all;
 
-image_path = '../../data/images/others_286.jpg';
+image_path = '../../data/images/ship_33.jpg';
 ORIGINAL_IMG = read_image(image_path);
 
 GRAY_IMG = gray_image(ORIGINAL_IMG);
@@ -32,8 +32,8 @@ subplot(3, 4, 5), imshow(SHADOW_REMOVAL_IMG), title('Удаление грани
 subplot(3, 4, 6), imshow(LOCALIZATION), title('Локализация объекта (Порог)')
 subplot(3, 4, 7), imshow(RECREATED_IMG), title('Извлечение границ объекта (Левый и правый пиксель)')
 subplot(3, 4, 8), imshow(DILATE_NEW_IMG), title('Удаление границ объекта')
-subplot(3, 4, 9), imshow(DILATE_IMG), title('Расширение белого пикселя (Морфологическое расширение)')
-subplot(3, 4, 10), imshow(EXPANDED_IMG), title('Объединение изображений после фильтрации и расширения')
+subplot(3, 4, 9), imshow(DILATE_IMG), title('Расширение белого пикселя')
+subplot(3, 4, 10), imshow(EXPANDED_IMG), title('Объединение после фильтрации и расширения')
 subplot(3, 4, 11), imshow(ENTROPY_IMG), title('Сегментация по двумерной энтропии')
 subplot(3, 4, 12), imshow(FINAL_IMG), title('Постобработка')
 

@@ -4,7 +4,7 @@ clc; clear all; close all;
 
 
 path = '../data/images';
-filename = './scan-2200s-5'; % Исходное имя файла (без расширения)
+filename = './scan-4125-8'; % Исходное имя файла (без расширения)
 file_ext = '.jpg'; % Расширение файла
 postfix = '_norm'; % Постфикс
 postfix_lap = '_laplas'; % Постфикс

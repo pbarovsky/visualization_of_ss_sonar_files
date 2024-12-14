@@ -3,7 +3,7 @@
 clc; clear all; close all
 
 % Загрузка изображения
-img = imread('../data/images/scan-2200s-5.jpg'); % Замените на путь к вашему изображению
+img = imread('../data/images/ship_33.jpg'); % Замените на путь к вашему изображению
 
 img_gray = Gray_Image(img); % Преобразование в градации серого
 

@@ -5,7 +5,7 @@ clear;
 close all;
 
 % Шаг 1: Загрузка изображения
-img = imread('../data/images/scan-2200s-5.jpg');
+img = imread('../data/images/ship_33.jpg');
 if size(img, 3) == 3
     img = rgb2gray(img); % Преобразование в оттенки серого, если изображение цветное
 end

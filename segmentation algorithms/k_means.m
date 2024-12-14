@@ -2,9 +2,9 @@
 
 clc; clear all; close all;
 
-k_means("../data/images/others_286.jpg")
+k_means_alg("../data/images/ship_33.jpg")
 
-function k_means(image_path)
+function k_means_alg(image_path)
     % Чтение изображения
     img = imread(image_path);
     if size(img, 3) == 3
@@ -38,15 +38,15 @@ function k_means(image_path)
     fprintf('Улучшение маски...\n');
     binary_mask = imclose(binary_mask, strel('square', 2)); % Закрытие пробелов
 
-    % Параметры для удаления мелких объектов
-    min_sizes = [20, 50, 100, 200, 500, 800, 1200, 2000, 5000];
-
-    % Цикл для удаления мелких объектов
-    for i = 1:length(min_sizes)
-        current_size = min_sizes(i);
-        binary_mask = bwareaopen(binary_mask, current_size); % Удаление мелких объектов
-        fprintf('Удаление объектов размером менее %d пикселей...\n', current_size);
-    end
+    % % Параметры для удаления мелких объектов
+    % min_sizes = [20, 50, 100, 200, 500, 800, 1200, 2000, 5000];
+    % 
+    % % Цикл для удаления мелких объектов
+    % for i = 1:length(min_sizes)
+    %     current_size = min_sizes(i);
+    %     binary_mask = bwareaopen(binary_mask, current_size); % Удаление мелких объектов
+    %     fprintf('Удаление объектов размером менее %d пикселей...\n', current_size);
+    % end
 
     figure; imshow(binary_mask, []); title('Улучшенная маска объекта');
 

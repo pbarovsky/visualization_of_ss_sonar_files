@@ -2,10 +2,10 @@
 
 clc; clear all; close all;
 
-sob_kk_m("../data/images/ship_33.jpg")
+k_means_sobel_edge_alg("../data/images/ship_33.jpg")
 
 
-function sob_kk_m(image_path)
+function k_means_sobel_edge_alg(image_path)
     % Чтение изображения
     img = imread(image_path);
     if size(img, 3) == 3
